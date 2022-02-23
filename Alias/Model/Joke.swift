@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct JokeData {
+struct Joke: Decodable {
     let content: String
 }

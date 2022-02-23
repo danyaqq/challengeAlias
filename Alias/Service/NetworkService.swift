@@ -8,7 +8,7 @@
 import Foundation
 
 protocol JokeManagerDelegate {
-    func didUpdateJoke(_ jokeManager: JokeManager, weather: Joke)
+    func didUpdateJoke(_ jokeManager: JokeManager, joke: Joke)
 }
 
 struct JokeManager {
@@ -23,12 +23,11 @@ struct JokeManager {
             
             let task = session.dataTask(with: url) { (data, response, error) in
                 if error != nil {
-                    delegate?.didFailWithError(error: error!)
                     return
                 }
                 
                 if let safeData = data {
-                    if let weather = self.parseJSON(safeData) {
+                    if let joke = self.parseJSON(safeData) {
                         self.delegate?.didUpdateJoke(self, joke: joke)
                     }
                 }
@@ -40,11 +39,9 @@ struct JokeManager {
     func parseJSON(_ weatherData: Data) -> Joke? {
         let decoder = JSONDecoder()
         do {
-            let decodeData = try decoder.decode(JokeData.self, from: weatherData)
-            let content = decodeData.content
-            return weather
+            let decodeData = try decoder.decode(Joke.self, from: weatherData)
+            return decodeData
         } catch {
-            delegate?.didFailWithError(error: error)
             return nil
         }
     }
