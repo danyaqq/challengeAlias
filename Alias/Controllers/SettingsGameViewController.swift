@@ -9,15 +9,23 @@ import UIKit
 
 class SettingsGameViewController: UIViewController {
 
-    @IBOutlet weak var nextButton: UIButton!
-    
+   
+    @IBOutlet weak var sportButton: UIButton!
+    @IBOutlet weak var filmButton: UIButton!
+    @IBOutlet weak var animalsButton: UIButton!
+    @IBOutlet weak var historyButton: UIButton!
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        
     }
     
     func setupView(){
-        nextButton.layer.cornerRadius = 8
+        sportButton.layer.cornerRadius = 8
+        filmButton.layer.cornerRadius = 8
+        animalsButton.layer.cornerRadius = 8
+        historyButton.layer.cornerRadius = 8
     }
 
 }
