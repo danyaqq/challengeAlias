@@ -22,16 +22,18 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Oe4-zj-qgL">
-                                <rect key="frame" x="30" y="302" width="354" height="292"/>
+                                <rect key="frame" x="30" y="301.5" width="354" height="293"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ALIAS GAME" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cys-UO-Q0k">
-                                        <rect key="frame" x="65" y="0.0" width="224.5" height="172"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="УГАДАЙ СЛОВО!" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cys-UO-Q0k">
+                                        <rect key="frame" x="20.5" y="0.0" width="313" height="173"/>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="72"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
+                                        <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <size key="shadowOffset" width="1" height="1"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zrH-0B-841">
-                                        <rect key="frame" x="0.0" y="202" width="354" height="90"/>
+                                        <rect key="frame" x="0.0" y="203" width="354" height="90"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="90" id="dj5-ly-sg2"/>
@@ -71,6 +73,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="background"/>
+                        <color key="tintColor" red="0.44313725490196076" green="0.75294117647058822" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wlA-bE-4iW" secondAttribute="bottom" constant="20" id="GNr-6l-giq"/>
                             <constraint firstItem="zcX-X4-G1G" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="JHI-j5-zxF"/>
