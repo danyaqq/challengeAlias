@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Zs1-A9-HuT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Zs1-A9-HuT">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -285,33 +285,68 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n7g-bE-hHG">
-                                <rect key="frame" x="97" y="772" width="220" height="70"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="41" translatesAutoresizingMaskIntoConstraints="NO" id="pgY-Gg-aSU">
+                                <rect key="frame" x="80" y="299" width="254" height="380"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IHx-Zy-R6e">
+                                        <rect key="frame" x="0.0" y="0.0" width="254" height="64.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Спорт">
+                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="21"/>
+                                            <color key="baseForegroundColor" systemColor="labelColor"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4fr-3Y-h9s">
+                                        <rect key="frame" x="0.0" y="105.5" width="254" height="64"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Фильмы">
+                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="21"/>
+                                            <color key="baseForegroundColor" systemColor="labelColor"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q1Z-9n-4Cw">
+                                        <rect key="frame" x="0.0" y="210.5" width="254" height="64.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Животные">
+                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="21"/>
+                                            <color key="baseForegroundColor" systemColor="labelColor"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bTN-ZS-5gq">
+                                        <rect key="frame" x="0.0" y="316" width="254" height="64"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="История">
+                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="21"/>
+                                            <color key="baseForegroundColor" systemColor="labelColor"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="A9z-6q-jcW"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="220" id="ukx-93-zYg"/>
+                                    <constraint firstAttribute="height" constant="380" id="aR1-rO-Rnb"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="ДАЛЕЕ">
-                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="21"/>
-                                    <color key="baseForegroundColor" systemColor="labelColor"/>
-                                </buttonConfiguration>
-                            </button>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Fri-oe-BCd"/>
                         <color key="backgroundColor" name="background"/>
                         <constraints>
+                            <constraint firstItem="pgY-Gg-aSU" firstAttribute="top" secondItem="bxV-Ts-myH" secondAttribute="bottom" constant="80" id="0VH-rL-ZtV"/>
                             <constraint firstAttribute="trailing" secondItem="bxV-Ts-myH" secondAttribute="trailing" constant="20" id="6vh-px-AGq"/>
-                            <constraint firstItem="Fri-oe-BCd" firstAttribute="bottom" secondItem="n7g-bE-hHG" secondAttribute="bottom" constant="20" id="Dfx-20-fij"/>
+                            <constraint firstItem="pgY-Gg-aSU" firstAttribute="leading" secondItem="Fri-oe-BCd" secondAttribute="leading" constant="80" id="J2b-ce-a6Q"/>
                             <constraint firstItem="bxV-Ts-myH" firstAttribute="top" secondItem="Fri-oe-BCd" secondAttribute="top" constant="30" id="TRv-yh-ah2"/>
-                            <constraint firstItem="n7g-bE-hHG" firstAttribute="centerX" secondItem="2iz-Tv-BX4" secondAttribute="centerX" id="io9-nt-2N7"/>
+                            <constraint firstItem="Fri-oe-BCd" firstAttribute="trailing" secondItem="pgY-Gg-aSU" secondAttribute="trailing" constant="80" id="ZCz-Xs-V9c"/>
                             <constraint firstItem="bxV-Ts-myH" firstAttribute="leading" secondItem="Fri-oe-BCd" secondAttribute="leading" constant="20" id="ydH-J3-kGA"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Настройка игры" id="lyp-Bv-LBH"/>
                     <connections>
-                        <outlet property="nextButton" destination="n7g-bE-hHG" id="Oge-Wb-3s0"/>
+                        <outlet property="animalsButton" destination="q1Z-9n-4Cw" id="YFu-3J-u08"/>
+                        <outlet property="filmButton" destination="4fr-3Y-h9s" id="zan-kY-pQD"/>
+                        <outlet property="historyButton" destination="bTN-ZS-5gq" id="Zj1-gv-qvY"/>
+                        <outlet property="sportButton" destination="IHx-Zy-R6e" id="k5X-1x-e7P"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v20-PL-Ys1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
