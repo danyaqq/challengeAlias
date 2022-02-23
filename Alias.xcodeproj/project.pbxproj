@@ -18,6 +18,7 @@
 		372C3C8627C64E7800EF01DC /* wron.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 372C3C8327C64E7800EF01DC /* wron.mp3 */; };
 		372C3C8827C6582700EF01DC /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372C3C8727C6582700EF01DC /* RulesViewController.swift */; };
 		372C3C8C27C65F4A00EF01DC /* SettingsGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372C3C8B27C65F4A00EF01DC /* SettingsGameViewController.swift */; };
+		372C3C9027C667D400EF01DC /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372C3C8F27C667D400EF01DC /* NetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		372C3C8327C64E7800EF01DC /* wron.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = wron.mp3; sourceTree = "<group>"; };
 		372C3C8727C6582700EF01DC /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
 		372C3C8B27C65F4A00EF01DC /* SettingsGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsGameViewController.swift; sourceTree = "<group>"; };
+		372C3C8F27C667D400EF01DC /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 		372C3C6A27C64DFB00EF01DC /* Alias */ = {
 			isa = PBXGroup;
 			children = (
+				372C3C8E27C667BF00EF01DC /* Service */,
 				372C3C8D27C6606800EF01DC /* View */,
 				372C3C8A27C6590C00EF01DC /* Controllers */,
 				372C3C8927C6590100EF01DC /* App */,
@@ -120,6 +123,14 @@
 				372C3C7127C64DFB00EF01DC /* Main.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		372C3C8E27C667BF00EF01DC /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				372C3C8F27C667D400EF01DC /* NetworkService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +211,7 @@
 				372C3C8C27C65F4A00EF01DC /* SettingsGameViewController.swift in Sources */,
 				372C3C6C27C64DFB00EF01DC /* AppDelegate.swift in Sources */,
 				372C3C8827C6582700EF01DC /* RulesViewController.swift in Sources */,
+				372C3C9027C667D400EF01DC /* NetworkService.swift in Sources */,
 				372C3C6E27C64DFB00EF01DC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
