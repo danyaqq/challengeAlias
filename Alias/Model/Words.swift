@@ -9,4 +9,8 @@ import Foundation
 
 struct Words{
     let word: String
+    init(word: String) {
+        self.word = word
+    }
+    
 }

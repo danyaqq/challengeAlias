@@ -21,6 +21,8 @@ class SettingsGameViewController: UIViewController {
         
     }
     
+    
+    
     func setupView(){
         sportButton.layer.cornerRadius = 8
         filmButton.layer.cornerRadius = 8
