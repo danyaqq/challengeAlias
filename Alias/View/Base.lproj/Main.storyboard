@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Zs1-A9-HuT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Zs1-A9-HuT">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -44,7 +44,7 @@
                                             <color key="titleColor" systemColor="labelColor"/>
                                         </state>
                                         <connections>
-                                            <segue destination="PHr-WP-4ad" kind="show" id="FPT-Od-wIZ"/>
+                                            <segue destination="KRI-O4-WLU" kind="show" id="C8w-7z-hhG"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -242,7 +242,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jPa-dw-OQ0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1632" y="620"/>
+            <point key="canvasLocation" x="1645" y="446"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eXz-kH-a7i">
@@ -262,6 +262,47 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="beD-UP-oIV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-614.49275362318849" y="81.696428571428569"/>
+        </scene>
+        <!--Команды-->
+        <scene sceneID="Gpf-rS-sQS">
+            <objects>
+                <viewController id="KRI-O4-WLU" customClass="TeamsViewController" customModule="Alias" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AgP-bz-ryE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgn-OR-coI">
+                                <rect key="frame" x="97" y="772" width="220" height="70"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="Oc5-dX-QYh"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="220" id="xRw-aM-72o"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="ДАЛЕЕ">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="21"/>
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="PHr-WP-4ad" kind="show" id="l59-1M-1OL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bHF-hq-Ryr"/>
+                        <color key="backgroundColor" name="background"/>
+                        <constraints>
+                            <constraint firstItem="hgn-OR-coI" firstAttribute="centerX" secondItem="AgP-bz-ryE" secondAttribute="centerX" id="kKP-zy-868"/>
+                            <constraint firstItem="bHF-hq-Ryr" firstAttribute="bottom" secondItem="hgn-OR-coI" secondAttribute="bottom" constant="20" id="xMR-G6-TBJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Команды" id="ncD-3I-HfZ"/>
+                    <connections>
+                        <outlet property="nextButton" destination="hgn-OR-coI" id="g9p-IA-NyH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tog-gw-QKs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1644.9275362318842" y="-282.58928571428572"/>
         </scene>
         <!--Настройка игры-->
         <scene sceneID="8Lj-VQ-HRY">
@@ -354,7 +395,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v20-PL-Ys1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1632" y="-332"/>
+            <point key="canvasLocation" x="2771" y="-283"/>
         </scene>
     </scenes>
     <resources>
