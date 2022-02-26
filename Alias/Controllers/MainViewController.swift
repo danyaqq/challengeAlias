@@ -8,7 +8,7 @@
 import UIKit
 
 class MainViewController: UIViewController {
-
+    
     //MARK: - Views
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var howToPlayButton: UIButton!
@@ -17,22 +17,38 @@ class MainViewController: UIViewController {
     
     //MARK: - Properties
     var gameData: GameData = GameData()
+    var teams: [String] = []
     
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
     }
-
+    
     //MARK: - Setup views
     func setupView(){
         startButton.layer.cornerRadius = 8
         howToPlayButton.layer.cornerRadius = 8
         stepper.minimumValue = 2
     }
-
+    
     @IBAction func stepperTapped(_ sender: UIStepper) {
-//        teamsCount
+        teamsCount.text = "Количество команд: \(Int(sender.value))"
     }
+    
+    @IBAction func nextButtonTap(_ sender: UIButton) {
+        for i in 1...Int(stepper.value){
+            teams.append("Команда \(i)")
+        }
+        gameData.teams = teams
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToSettings" {
+            let destinationVC = segue.destination as! SettingsGameViewController
+            destinationVC.gameData = gameData
+        }
+    }
+
 }
 

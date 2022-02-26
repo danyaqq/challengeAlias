@@ -81,7 +81,8 @@
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="PHr-WP-4ad" kind="show" id="Zkf-Em-1gE"/>
+                                    <action selector="nextButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yVu-us-fKZ"/>
+                                    <segue destination="PHr-WP-4ad" kind="show" identifier="goToSettings" id="Zkf-Em-1gE"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -283,7 +284,7 @@
         <!--Настройка игры-->
         <scene sceneID="8Lj-VQ-HRY">
             <objects>
-                <viewController id="PHr-WP-4ad" customClass="SettingsGameViewController" customModule="Alias" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SettingsGameViewController" id="PHr-WP-4ad" customClass="SettingsGameViewController" customModule="Alias" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2iz-Tv-BX4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -431,7 +432,8 @@
                                     <fontDescription key="titleFontDescription" type="system" weight="heavy" pointSize="25"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="bs6-7b-S1w" kind="show" id="bpf-YK-99q"/>
+                                    <action selector="startButtonTap:" destination="PHr-WP-4ad" eventType="touchUpInside" id="0lC-Br-o61"/>
+                                    <segue destination="bs6-7b-S1w" kind="show" identifier="goToGame" id="bpf-YK-99q"/>
                                 </connections>
                             </button>
                         </subviews>

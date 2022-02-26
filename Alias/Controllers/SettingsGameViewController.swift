@@ -23,6 +23,7 @@ class SettingsGameViewController: UIViewController {
     
     //MARK: - Properties
     var selectedCategory: String = "Спорт"
+    var wordsWithCategory: Category = Category.sport
     var selectedTime: Int = 60
     var gameData: GameData = GameData()
     
@@ -47,6 +48,7 @@ class SettingsGameViewController: UIViewController {
         oneMinuteButton.sendActions(for: .touchUpInside)
         
         //Нажимаем на кнопку "Спорт" при инициализации view
+        sportButton.sendActions(for: .touchUpInside)
     }
     
     //MARK: - Actions
@@ -89,13 +91,34 @@ class SettingsGameViewController: UIViewController {
         selectedTime = sender.tag
     }
     
-    //Присваиваем selectedCategory текст кнопки
+    //Присваиваем selectedCategory текст кнопки и меняем background
     @IBAction func categoryButtonTapped(_ sender: UIButton) {
         guard let text = sender.titleLabel?.text else {
             return
         }
-        
         selectedCategory = text
+        
+        for button in [sportButton, filmButton, animalsButton, historyButton]{
+            if selectedCategory == button?.titleLabel?.text{
+                button?.backgroundColor = .lightGray
+            } else {
+                button?.backgroundColor = .white
+            }
+        }
+        
+        
+    }
+    
+    @IBAction func startButtonTap(_ sender: UIButton) {
+        gameData.time = selectedTime
+        gameData.wordsWithCategory = wordsWithCategory
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToGame" {
+            let destinationVC = segue.destination as! GameViewController
+            destinationVC.gameData = gameData
+        }
     }
     
 }
