@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Zs1-A9-HuT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Zs1-A9-HuT">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -463,7 +463,7 @@
                                                 <color key="tintColor" systemColor="systemGreenColor"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="ПРАВИЛЬНО">
-                                                    <fontDescription key="titleFontDescription" type="system" weight="heavy" pointSize="20"/>
+                                                    <fontDescription key="titleFontDescription" type="system" weight="heavy" pointSize="17"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="correctButtonTap:" destination="bs6-7b-S1w" eventType="touchUpInside" id="w0X-mi-USQ"/>
@@ -475,7 +475,7 @@
                                                 <color key="tintColor" systemColor="systemRedColor"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="ПРОПУСТИТЬ">
-                                                    <fontDescription key="titleFontDescription" type="system" weight="heavy" pointSize="21"/>
+                                                    <fontDescription key="titleFontDescription" type="system" weight="heavy" pointSize="17"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="skipButtonTap:" destination="bs6-7b-S1w" eventType="touchUpInside" id="Ia3-oj-4t5"/>
@@ -492,17 +492,17 @@
                                             <constraint firstAttribute="height" constant="60" id="boa-Nf-Oxi"/>
                                         </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="76" translatesAutoresizingMaskIntoConstraints="NO" id="4BY-Fj-5Hw">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="4BY-Fj-5Hw">
                                         <rect key="frame" x="30" y="100" width="354" height="48"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Команда 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NEK-sq-Tqv">
-                                                <rect key="frame" x="0.0" y="0.0" width="182.5" height="48"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Команда 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NEK-sq-Tqv">
+                                                <rect key="frame" x="0.0" y="0.0" width="301" height="48"/>
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0/60" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="04H-Vd-mfh">
-                                                <rect key="frame" x="258.5" y="0.0" width="95.5" height="48"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="04H-Vd-mfh">
+                                                <rect key="frame" x="301" y="0.0" width="53" height="48"/>
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -510,7 +510,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pGP-Zv-hwc">
-                                        <rect key="frame" x="101.5" y="774" width="211" height="60"/>
+                                        <rect key="frame" x="114.5" y="774" width="185.5" height="60"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="CQY-ru-Jjg"/>
@@ -519,7 +519,7 @@
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="ЗАКОНЧИТЬ ИГРУ">
-                                            <fontDescription key="titleFontDescription" type="system" weight="heavy" pointSize="20"/>
+                                            <fontDescription key="titleFontDescription" type="system" weight="heavy" pointSize="17"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="exitButtonTap:" destination="bs6-7b-S1w" eventType="touchUpInside" id="NC3-P4-hYM"/>
@@ -532,7 +532,6 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.45882352939999999" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottomMargin" secondItem="pGP-Zv-hwc" secondAttribute="bottom" constant="20" id="Dmi-zI-J9x"/>
                                     <constraint firstItem="RIP-bM-H90" firstAttribute="top" secondItem="4BY-Fj-5Hw" secondAttribute="bottom" constant="30" id="KJs-vj-EUg"/>
@@ -568,6 +567,8 @@
                         <outlet property="skipButton" destination="FSJ-mk-Knc" id="3NV-gY-Adl"/>
                         <outlet property="teamLabel" destination="NEK-sq-Tqv" id="HY5-xp-PCf"/>
                         <outlet property="timeLabel" destination="RIP-bM-H90" id="FGn-Ko-PIW"/>
+                        <segue destination="NPV-jr-sNF" kind="show" identifier="goToRoundOverVC" id="zxj-oD-8gv"/>
+                        <segue destination="9er-VG-K5b" kind="show" identifier="goToResult" id="5e2-S6-ePa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DiZ-zW-A87" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -583,7 +584,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Раунд завершен" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hwx-mX-bam">
-                                <rect key="frame" x="80" y="74" width="254" height="37"/>
+                                <rect key="frame" x="80" y="118" width="254" height="37"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -609,11 +610,11 @@
                                     <fontDescription key="titleFontDescription" type="system" weight="heavy" pointSize="20"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="playRound:" destination="NPV-jr-sNF" eventType="touchUpInside" id="NfC-8q-Bxl"/>
+                                    <action selector="playRoundButtonTap:" destination="NPV-jr-sNF" eventType="touchUpInside" id="Rvj-JB-2a9"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Очки: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vrD-cP-EXe">
-                                <rect key="frame" x="80" y="198" width="254" height="48"/>
+                                <rect key="frame" x="80" y="242" width="254" height="48"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -634,6 +635,7 @@
                             <constraint firstItem="3py-6f-KcO" firstAttribute="trailing" secondItem="vrD-cP-EXe" secondAttribute="trailing" constant="80" id="xoC-Mc-022"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="ecT-PI-2xr"/>
                     <connections>
                         <outlet property="currentTeamLabel" destination="LTe-Ts-1oZ" id="mm4-Px-jLX"/>
                         <outlet property="playRoundButton" destination="mLU-Eg-dgy" id="X2u-gx-YKf"/>
@@ -653,7 +655,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Игра завершена" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OVn-0W-Fvt">
-                                <rect key="frame" x="81.5" y="74" width="251" height="37"/>
+                                <rect key="frame" x="81.5" y="118" width="251" height="37"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -679,11 +681,11 @@
                                     <fontDescription key="titleFontDescription" type="system" weight="heavy" pointSize="20"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="outButton:" destination="9er-VG-K5b" eventType="touchUpInside" id="eSV-eZ-smc"/>
+                                    <action selector="quitButtonTap:" destination="9er-VG-K5b" eventType="touchUpInside" id="uRx-Xr-vbj"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Очки: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yNa-pX-7M8">
-                                <rect key="frame" x="80" y="196" width="254" height="98"/>
+                                <rect key="frame" x="80" y="240" width="254" height="98"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="98" id="FuD-07-3hi"/>
                                 </constraints>
@@ -707,6 +709,7 @@
                             <constraint firstItem="OVn-0W-Fvt" firstAttribute="top" secondItem="rZp-PB-3Fy" secondAttribute="top" constant="30" id="uMz-mC-bja"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="DSE-J1-qCE"/>
                     <connections>
                         <outlet property="outButton" destination="mwI-Lf-rCy" id="ljR-pz-T89"/>
                         <outlet property="scoreLabel" destination="yNa-pX-7M8" id="DbX-0X-CfY"/>

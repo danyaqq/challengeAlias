@@ -14,7 +14,11 @@ class TheRoundIsOverViewController: UIViewController {
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var playRoundButton: UIButton!
     
-    //MARK: - Screen orientation
+    //MARK: - Properties
+    var gameData = GameData()
+    var score: Int?
+    var callBack: (()-> ())?
+    
     override var shouldAutorotate: Bool {
         false
     }
@@ -26,11 +30,14 @@ class TheRoundIsOverViewController: UIViewController {
     }
     
     @IBAction func playRoundButtonTap(_ sender: UIButton) {
-        
-    
+        navigationController?.popViewController(animated: true)
+        callBack?()
     }
+    
     func setupView() {
         playRoundButton.layer.cornerRadius = 8
         
+        scoreLabel.text = "Очки: \(gameData.selectedTeam?.score ?? 0)"
+        currentTeamLabel.text = gameData.getNextTeamName()
     }
 }

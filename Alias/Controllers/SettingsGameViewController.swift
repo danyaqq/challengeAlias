@@ -22,8 +22,8 @@ class SettingsGameViewController: UIViewController {
     @IBOutlet weak var threeMinuteButton: UIButton!
     
     //MARK: - Properties
-    var selectedCategory: String = "Спорт"
-    var wordsWithCategory: Category = Category.sport
+    var selectedCategory: String = "История"
+    var wordsWithCategory: Category = Category.history
     var selectedTime: Int = 60
     var gameData: GameData = GameData()
     
@@ -45,7 +45,7 @@ class SettingsGameViewController: UIViewController {
         }
         
         //Задаём тэги кнопкам, чтобы потом приравнивать их выбранному времени
-        oneMinuteButton.tag = 60
+        oneMinuteButton.tag = 10
         twoMinuteButton.tag = 120
         threeMinuteButton.tag = 180
         
@@ -117,15 +117,15 @@ class SettingsGameViewController: UIViewController {
             wordsWithCategory = .animals
         } else if selectedCategory == "История"{
             wordsWithCategory = .history
-        } else if selectedCategory == "Фильм"{
+        } else if selectedCategory == "Фильмы"{
             wordsWithCategory = .film
         }
     }
     
     @IBAction func startButtonTap(_ sender: UIButton) {
         gameData.time = selectedTime
+        gameData.timeConstant = selectedTime
         gameData.wordsWithCategory = wordsWithCategory
-        gameData.timerProcess()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

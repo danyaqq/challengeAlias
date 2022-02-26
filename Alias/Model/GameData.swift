@@ -11,6 +11,7 @@ class GameData{
     //MARK: - Properties
     //time, words for victory, category + words, teams, selectedTeams,
     //rounds (teams.count), currentRound, current word
+    var timeConstant: Int = 0
     var time: Int = 0
     var timer = Timer()
     var wordsForVictory = 60
@@ -29,7 +30,7 @@ class GameData{
     //change selected team after time == 0
     //reset game
     func gameSetup(){
-        self.selectedTeam = teams.first
+        self.selectedTeam = teams[currentRound - 1]
         self.rounds = teams.count
     }
     
@@ -39,20 +40,6 @@ class GameData{
     }
     
     //timer creation
-    func timerProcess(){
-        timer.invalidate()
-        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
-    }
-    
-    @objc func updateTimer() {
-        if time >= 1 {
-            time -= 1
-            print(time)
-        } else {
-            time = 0
-            timer.invalidate()
-        }
-    }
     
     func addPoint(){
         selectedTeam?.score += 1
@@ -65,9 +52,13 @@ class GameData{
         getRandomWord()
     }
     
+    func getNextTeamName() -> String{
+        return teams[currentRound].name
+    }
+    
     func changeSelectedTeam(){
+        time = timeConstant
         currentRound += 1
-        selectedTeam = teams[currentRound - 1]
     }
     
     func resetGame(){
@@ -75,7 +66,8 @@ class GameData{
             team.score = 0
             team.guessedWords = 0
         }
-        selectedTeam = teams[0]
+        selectedTeam = nil
         currentRound = 1
+        rounds = nil
     }
 }

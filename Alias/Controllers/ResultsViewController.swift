@@ -14,7 +14,8 @@ class ResultsViewController: UIViewController {
     @IBOutlet weak var outButton: UIButton!
     @IBOutlet weak var scoreLabel: UILabel!
     
-    //MARK: - Screen orientation
+    //MARK: - Properties
+    var gameData = GameData()
     override var shouldAutorotate: Bool {
         false
     }
@@ -25,21 +26,13 @@ class ResultsViewController: UIViewController {
         setupView()
     }
     
-    @IBAction func outButtonTap(_ sender: UIButton) {
-    
-    }
-    
     func setupView() {
         outButton.layer.cornerRadius = 8
+        navigationController?.navigationBar.isHidden = true
     }
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func quitButtonTap(_ sender: UIButton) {
+        gameData.resetGame()
+        self.navigationController?.popToRootViewController(animated: true)
     }
-    */
-
 }
