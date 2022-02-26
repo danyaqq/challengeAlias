@@ -21,6 +21,11 @@ class GameViewController: UIViewController {
     //MARK: - Properties
     var gameData = GameData()
     
+    //MARK: - Screen orientation
+    override var shouldAutorotate: Bool {
+        false
+    }
+    
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +37,6 @@ class GameViewController: UIViewController {
         for button in [correctButton, skipButton, resetButton]{
             button?.layer.cornerRadius = 8
         }
-        
         setupGame()
     }
 
@@ -46,8 +50,12 @@ class GameViewController: UIViewController {
         currentWordLabel.text = gameData.currentWord
     }
     
+    @IBAction func exitButtonTap(_ sender: Any) {
+    }
+    
     func setupGame(){
         gameData.getRandomWord()
         currentWordLabel.text = gameData.currentWord
+        timeLabel.text = String(gameData.time)
     }
 }

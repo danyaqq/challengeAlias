@@ -19,6 +19,11 @@ class MainViewController: UIViewController {
     var gameData: GameData = GameData()
     var teams: [Team] = []
     
+    //MARK: - Screen orientation
+    override var shouldAutorotate: Bool {
+        false
+    }
+    
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
