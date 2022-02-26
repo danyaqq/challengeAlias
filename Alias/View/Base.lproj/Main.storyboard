@@ -45,6 +45,9 @@
                                         <rect key="frame" x="125.5" y="57" width="94" height="32"/>
                                         <color key="backgroundColor" name="background"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="stepperTapped:" destination="BYZ-38-t0r" eventType="valueChanged" id="scX-3a-EBN"/>
+                                        </connections>
                                     </stepper>
                                 </subviews>
                             </stackView>
@@ -102,6 +105,8 @@
                     <connections>
                         <outlet property="howToPlayButton" destination="wlA-bE-4iW" id="Hff-eP-ipB"/>
                         <outlet property="startButton" destination="zrH-0B-841" id="2rc-N0-UHI"/>
+                        <outlet property="stepper" destination="DTr-Kb-Kn0" id="3EJ-xX-RUq"/>
+                        <outlet property="teamsCount" destination="aik-Cz-P0y" id="D5l-G6-occ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -311,6 +316,9 @@
                                             <fontDescription key="titleFontDescription" type="boldSystem" pointSize="21"/>
                                             <color key="baseForegroundColor" systemColor="labelColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="categoryButtonTapped:" destination="PHr-WP-4ad" eventType="touchUpInside" id="L4k-0n-T4O"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4fr-3Y-h9s">
                                         <rect key="frame" x="0.0" y="80" width="254" height="60"/>
@@ -320,6 +328,9 @@
                                             <fontDescription key="titleFontDescription" type="boldSystem" pointSize="21"/>
                                             <color key="baseForegroundColor" systemColor="labelColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="categoryButtonTapped:" destination="PHr-WP-4ad" eventType="touchUpInside" id="PIy-rk-mNG"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q1Z-9n-4Cw">
                                         <rect key="frame" x="0.0" y="160" width="254" height="60"/>
@@ -329,6 +340,9 @@
                                             <fontDescription key="titleFontDescription" type="boldSystem" pointSize="21"/>
                                             <color key="baseForegroundColor" systemColor="labelColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="categoryButtonTapped:" destination="PHr-WP-4ad" eventType="touchUpInside" id="sUe-OY-C1L"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bTN-ZS-5gq">
                                         <rect key="frame" x="0.0" y="240" width="254" height="60"/>
@@ -338,6 +352,9 @@
                                             <fontDescription key="titleFontDescription" type="boldSystem" pointSize="21"/>
                                             <color key="baseForegroundColor" systemColor="labelColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="categoryButtonTapped:" destination="PHr-WP-4ad" eventType="touchUpInside" id="Oyv-2B-UGA"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -568,10 +585,10 @@
             </objects>
             <point key="canvasLocation" x="2689.8550724637685" y="-104.46428571428571"/>
         </scene>
-        <!--View Controller-->
+        <!--The Round Is Over View Controller-->
         <scene sceneID="Al6-xI-Myj">
             <objects>
-                <viewController id="NPV-jr-sNF" sceneMemberID="viewController">
+                <viewController id="NPV-jr-sNF" customClass="TheRoundIsOverViewController" customModule="Alias" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bxP-YF-CZM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -621,10 +638,10 @@
             </objects>
             <point key="canvasLocation" x="3903" y="-281"/>
         </scene>
-        <!--View Controller-->
+        <!--Results View Controller-->
         <scene sceneID="Gt4-vf-fyn">
             <objects>
-                <viewController id="9er-VG-K5b" sceneMemberID="viewController">
+                <viewController id="9er-VG-K5b" customClass="ResultsViewController" customModule="Alias" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2Cg-2H-hR9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

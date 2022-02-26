@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3701039527C988B10099D2E9 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3701039427C988B10099D2E9 /* GameViewController.swift */; };
 		3701039727C98D040099D2E9 /* GameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3701039627C98D040099D2E9 /* GameData.swift */; };
+		3701039927CA22480099D2E9 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3701039827CA22480099D2E9 /* ResultsViewController.swift */; };
+		3701039B27CA22620099D2E9 /* TheRoundIsOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3701039A27CA22620099D2E9 /* TheRoundIsOverViewController.swift */; };
 		372C3C6C27C64DFB00EF01DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372C3C6B27C64DFB00EF01DC /* AppDelegate.swift */; };
 		372C3C6E27C64DFB00EF01DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372C3C6D27C64DFB00EF01DC /* SceneDelegate.swift */; };
 		372C3C7027C64DFB00EF01DC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372C3C6F27C64DFB00EF01DC /* MainViewController.swift */; };
@@ -29,6 +31,8 @@
 /* Begin PBXFileReference section */
 		3701039427C988B10099D2E9 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		3701039627C98D040099D2E9 /* GameData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameData.swift; sourceTree = "<group>"; };
+		3701039827CA22480099D2E9 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		3701039A27CA22620099D2E9 /* TheRoundIsOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheRoundIsOverViewController.swift; sourceTree = "<group>"; };
 		372C3C6827C64DFB00EF01DC /* Alias.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alias.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		372C3C6B27C64DFB00EF01DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		372C3C6D27C64DFB00EF01DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +130,8 @@
 				372C3C8B27C65F4A00EF01DC /* SettingsGameViewController.swift */,
 				37A9841627C7DA7A0078F6EE /* TeamsViewController.swift */,
 				3701039427C988B10099D2E9 /* GameViewController.swift */,
+				3701039827CA22480099D2E9 /* ResultsViewController.swift */,
+				3701039A27CA22620099D2E9 /* TheRoundIsOverViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -238,9 +244,11 @@
 				372C3C6C27C64DFB00EF01DC /* AppDelegate.swift in Sources */,
 				372C3C8827C6582700EF01DC /* RulesViewController.swift in Sources */,
 				372C3C9027C667D400EF01DC /* NetworkService.swift in Sources */,
+				3701039B27CA22620099D2E9 /* TheRoundIsOverViewController.swift in Sources */,
 				372C3C6E27C64DFB00EF01DC /* SceneDelegate.swift in Sources */,
 				37FF3CC127C69DC4002A14BD /* Joke.swift in Sources */,
 				37FF3CC327C69DCC002A14BD /* Category.swift in Sources */,
+				3701039927CA22480099D2E9 /* ResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
