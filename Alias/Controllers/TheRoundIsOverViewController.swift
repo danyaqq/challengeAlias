@@ -9,10 +9,24 @@ import UIKit
 
 class TheRoundIsOverViewController: UIViewController {
 
+    //MARK: - Views
+    @IBOutlet weak var currentTeamLabel: UILabel!
+    @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var playRoundButton: UIButton!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupView()
     }
-
+    
+    @IBAction func playRoundButtonTap(_ sender: UIButton) {
+        
+    
+    }
+    func setupView() {
+        playRoundButton.layer.cornerRadius = 8
+        
+    }
 }
