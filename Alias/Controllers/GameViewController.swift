@@ -16,6 +16,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var teamLabel: UILabel!
     @IBOutlet weak var correctWordsLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var currentWordLabel: UILabel!
     
     //MARK: - Properties
     var gameData = GameData()
@@ -31,6 +32,22 @@ class GameViewController: UIViewController {
         for button in [correctButton, skipButton, resetButton]{
             button?.layer.cornerRadius = 8
         }
+        
+        setupGame()
     }
 
+    @IBAction func skipButtonTap(_ sender: UIButton) {
+        gameData.addPoint()
+        currentWordLabel.text = gameData.currentWord
+    }
+    
+    @IBAction func correctButtonTap(_ sender: UIButton) {
+        gameData.removePoint()
+        currentWordLabel.text = gameData.currentWord
+    }
+    
+    func setupGame(){
+        gameData.getRandomWord()
+        currentWordLabel.text = gameData.currentWord
+    }
 }

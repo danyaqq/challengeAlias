@@ -11,6 +11,7 @@
 		3701039727C98D040099D2E9 /* GameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3701039627C98D040099D2E9 /* GameData.swift */; };
 		3701039927CA22480099D2E9 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3701039827CA22480099D2E9 /* ResultsViewController.swift */; };
 		3701039B27CA22620099D2E9 /* TheRoundIsOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3701039A27CA22620099D2E9 /* TheRoundIsOverViewController.swift */; };
+		3701039D27CA4C070099D2E9 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3701039C27CA4C070099D2E9 /* Team.swift */; };
 		372C3C6C27C64DFB00EF01DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372C3C6B27C64DFB00EF01DC /* AppDelegate.swift */; };
 		372C3C6E27C64DFB00EF01DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372C3C6D27C64DFB00EF01DC /* SceneDelegate.swift */; };
 		372C3C7027C64DFB00EF01DC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372C3C6F27C64DFB00EF01DC /* MainViewController.swift */; };
@@ -33,6 +34,7 @@
 		3701039627C98D040099D2E9 /* GameData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameData.swift; sourceTree = "<group>"; };
 		3701039827CA22480099D2E9 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		3701039A27CA22620099D2E9 /* TheRoundIsOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheRoundIsOverViewController.swift; sourceTree = "<group>"; };
+		3701039C27CA4C070099D2E9 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		372C3C6827C64DFB00EF01DC /* Alias.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alias.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		372C3C6B27C64DFB00EF01DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		372C3C6D27C64DFB00EF01DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				37FF3CC027C69DC4002A14BD /* Joke.swift */,
 				37FF3CC227C69DCC002A14BD /* Category.swift */,
 				3701039627C98D040099D2E9 /* GameData.swift */,
+				3701039C27CA4C070099D2E9 /* Team.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 			files = (
 				3701039527C988B10099D2E9 /* GameViewController.swift in Sources */,
 				372C3C7027C64DFB00EF01DC /* MainViewController.swift in Sources */,
+				3701039D27CA4C070099D2E9 /* Team.swift in Sources */,
 				372C3C8C27C65F4A00EF01DC /* SettingsGameViewController.swift in Sources */,
 				37A9841727C7DA7A0078F6EE /* TeamsViewController.swift in Sources */,
 				3701039727C98D040099D2E9 /* GameData.swift in Sources */,
