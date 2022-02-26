@@ -14,14 +14,17 @@ class SettingsGameViewController: UIViewController {
     @IBOutlet weak var filmButton: UIButton!
     @IBOutlet weak var animalsButton: UIButton!
     @IBOutlet weak var historyButton: UIButton!
+    
     @IBOutlet weak var startButton: UIButton!
+    
     @IBOutlet weak var oneMinuteButton: UIButton!
     @IBOutlet weak var twoMinuteButton: UIButton!
     @IBOutlet weak var threeMinuteButton: UIButton!
     
     //MARK: - Properties
-    var selectedCategory: Category? = nil
+    var selectedCategory: String = "Спорт"
     var selectedTime: Int = 60
+    var gameData: GameData = GameData()
     
     //MARK: - Lifecycle
     override func viewDidLoad() {
@@ -42,8 +45,10 @@ class SettingsGameViewController: UIViewController {
         
         //Нажимаем на кнопку "1 минута" при инициализации view
         oneMinuteButton.sendActions(for: .touchUpInside)
+        
+        //Нажимаем на кнопку "Спорт" при инициализации view
     }
-
+    
     //MARK: - Actions
     
     //Выбранное время становится равным тэгу кнопки
@@ -51,6 +56,7 @@ class SettingsGameViewController: UIViewController {
     //Убираем border у других кнопок
     //Это костыль, но другого варианта у нас нет :(
     @IBAction func oneMinuteTap(_ sender: UIButton) {
+        selectedTime = sender.tag
         sender.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         sender.layer.borderWidth = 4
         
@@ -82,4 +88,14 @@ class SettingsGameViewController: UIViewController {
         }
         selectedTime = sender.tag
     }
+    
+    //Присваиваем selectedCategory текст кнопки
+    @IBAction func categoryButtonTapped(_ sender: UIButton) {
+        guard let text = sender.titleLabel?.text else {
+            return
+        }
+        
+        selectedCategory = text
+    }
+    
 }
