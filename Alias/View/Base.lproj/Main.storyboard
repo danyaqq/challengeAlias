@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Zs1-A9-HuT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Zs1-A9-HuT">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -619,24 +619,41 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Начать раунд">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="16"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="playRound:" destination="NPV-jr-sNF" eventType="touchUpInside" id="NfC-8q-Bxl"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Очки: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vrD-cP-EXe">
+                                <rect key="frame" x="80" y="198" width="254" height="48"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3py-6f-KcO"/>
                         <color key="backgroundColor" name="background"/>
                         <constraints>
+                            <constraint firstItem="vrD-cP-EXe" firstAttribute="top" secondItem="Hwx-mX-bam" secondAttribute="bottom" constant="87" id="0hT-U5-FTq"/>
                             <constraint firstItem="Hwx-mX-bam" firstAttribute="top" secondItem="3py-6f-KcO" secondAttribute="top" constant="30" id="46A-vM-tsF"/>
                             <constraint firstItem="LTe-Ts-1oZ" firstAttribute="leading" secondItem="3py-6f-KcO" secondAttribute="leading" constant="30" id="6CU-eS-Lsi"/>
                             <constraint firstItem="mLU-Eg-dgy" firstAttribute="centerX" secondItem="bxP-YF-CZM" secondAttribute="centerX" id="Czi-EZ-OGC"/>
                             <constraint firstAttribute="trailing" secondItem="LTe-Ts-1oZ" secondAttribute="trailing" constant="30" id="Der-NI-Lvu"/>
                             <constraint firstItem="Hwx-mX-bam" firstAttribute="centerX" secondItem="bxP-YF-CZM" secondAttribute="centerX" id="NLB-GS-Qqe"/>
                             <constraint firstItem="LTe-Ts-1oZ" firstAttribute="centerY" secondItem="bxP-YF-CZM" secondAttribute="centerY" id="PTI-Ya-cuP"/>
+                            <constraint firstItem="vrD-cP-EXe" firstAttribute="leading" secondItem="3py-6f-KcO" secondAttribute="leading" constant="80" id="k60-kN-48y"/>
                             <constraint firstItem="3py-6f-KcO" firstAttribute="bottom" secondItem="mLU-Eg-dgy" secondAttribute="bottom" constant="20" id="wW8-di-mpU"/>
+                            <constraint firstItem="3py-6f-KcO" firstAttribute="trailing" secondItem="vrD-cP-EXe" secondAttribute="trailing" constant="80" id="xoC-Mc-022"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="currentTeamLabel" destination="LTe-Ts-1oZ" id="mm4-Px-jLX"/>
+                        <outlet property="playRoundButton" destination="mLU-Eg-dgy" id="X2u-gx-YKf"/>
+                        <outlet property="scoreLabel" destination="vrD-cP-EXe" id="sg2-Bx-ljJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RCh-rZ-TDS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3903" y="-281"/>
+            <point key="canvasLocation" x="3902.898550724638" y="-338.16964285714283"/>
         </scene>
         <!--Results View Controller-->
         <scene sceneID="Gt4-vf-fyn">
@@ -672,13 +689,28 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Выйти">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="16"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="outButton:" destination="9er-VG-K5b" eventType="touchUpInside" id="eSV-eZ-smc"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Очки: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yNa-pX-7M8">
+                                <rect key="frame" x="80" y="196" width="254" height="98"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="98" id="FuD-07-3hi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rZp-PB-3Fy"/>
                         <color key="backgroundColor" name="background"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="0lQ-l2-cXb" secondAttribute="trailing" constant="30" id="3iw-W8-Z2y"/>
                             <constraint firstItem="0lQ-l2-cXb" firstAttribute="centerY" secondItem="2Cg-2H-hR9" secondAttribute="centerY" id="8ET-49-V0A"/>
+                            <constraint firstItem="rZp-PB-3Fy" firstAttribute="trailing" secondItem="yNa-pX-7M8" secondAttribute="trailing" constant="80" id="GyN-vL-7MV"/>
+                            <constraint firstItem="yNa-pX-7M8" firstAttribute="top" secondItem="OVn-0W-Fvt" secondAttribute="bottom" constant="85" id="QuI-EO-fZh"/>
+                            <constraint firstItem="yNa-pX-7M8" firstAttribute="leading" secondItem="rZp-PB-3Fy" secondAttribute="leading" constant="80" id="Yfj-hN-pPH"/>
                             <constraint firstItem="OVn-0W-Fvt" firstAttribute="centerX" secondItem="2Cg-2H-hR9" secondAttribute="centerX" id="dss-8B-gnR"/>
                             <constraint firstItem="mwI-Lf-rCy" firstAttribute="centerX" secondItem="2Cg-2H-hR9" secondAttribute="centerX" id="hJm-va-sRz"/>
                             <constraint firstItem="0lQ-l2-cXb" firstAttribute="leading" secondItem="rZp-PB-3Fy" secondAttribute="leading" constant="30" id="hS3-UK-hTg"/>
@@ -686,10 +718,15 @@
                             <constraint firstItem="OVn-0W-Fvt" firstAttribute="top" secondItem="rZp-PB-3Fy" secondAttribute="top" constant="30" id="uMz-mC-bja"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="outButton" destination="mwI-Lf-rCy" id="ljR-pz-T89"/>
+                        <outlet property="scoreLabel" destination="yNa-pX-7M8" id="DbX-0X-CfY"/>
+                        <outlet property="winnerLabel" destination="0lQ-l2-cXb" id="7xK-Ms-8z8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Myb-5P-nRc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3903" y="446"/>
+            <point key="canvasLocation" x="3902.898550724638" y="354.91071428571428"/>
         </scene>
     </scenes>
     <resources>

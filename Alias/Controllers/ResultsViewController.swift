@@ -9,13 +9,23 @@ import UIKit
 
 class ResultsViewController: UIViewController {
 
+    //MARK: - Views
+    @IBOutlet weak var winnerLabel: UILabel!
+    @IBOutlet weak var outButton: UIButton!
+    @IBOutlet weak var scoreLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupView()
     }
     
-
+    @IBAction func outButtonTap(_ sender: UIButton) {
+    
+    }
+    
+    func setupView() {
+        outButton.layer.cornerRadius = 8
+    }
     /*
     // MARK: - Navigation
 
