@@ -106,7 +106,15 @@ class SettingsGameViewController: UIViewController {
             }
         }
         
-        
+        if selectedCategory == "Спорт"{
+            wordsWithCategory = .sport
+        } else if selectedCategory == "Животные"{
+            wordsWithCategory = .animals
+        } else if selectedCategory == "История"{
+            wordsWithCategory = .history
+        } else if selectedCategory == "Фильм"{
+            wordsWithCategory = .film
+        }
     }
     
     @IBAction func startButtonTap(_ sender: UIButton) {

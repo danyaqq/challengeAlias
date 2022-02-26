@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Zs1-A9-HuT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Zs1-A9-HuT">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -481,8 +481,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RIP-bM-H90">
-                                        <rect key="frame" x="71.5" y="328.5" width="271" height="239"/>
-                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="200"/>
+                                        <rect key="frame" x="92.5" y="174.5" width="229" height="214"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="179"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -497,6 +497,9 @@
                                                 <buttonConfiguration key="configuration" style="plain" title="ПРАВИЛЬНО">
                                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="16"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="correctButtonTap:" destination="bs6-7b-S1w" eventType="touchUpInside" id="w0X-mi-USQ"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FSJ-mk-Knc">
                                                 <rect key="frame" x="197" y="0.0" width="177" height="60"/>
@@ -506,6 +509,9 @@
                                                 <buttonConfiguration key="configuration" style="plain" title="ПРОПУСТИТЬ">
                                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="16"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="skipButtonTap:" destination="bs6-7b-S1w" eventType="touchUpInside" id="Ia3-oj-4t5"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -548,19 +554,27 @@
                                             <fontDescription key="titleFontDescription" type="boldSystem" pointSize="16"/>
                                         </buttonConfiguration>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Слово" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BU2-vn-Nrp">
+                                        <rect key="frame" x="84" y="399" width="246.5" height="98"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="82"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.45882352939999999" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="RIP-bM-H90" firstAttribute="centerY" secondItem="gw4-uD-vFo" secondAttribute="centerY" id="3MW-Fj-l7X"/>
                                     <constraint firstAttribute="bottomMargin" secondItem="pGP-Zv-hwc" secondAttribute="bottom" constant="20" id="Dmi-zI-J9x"/>
+                                    <constraint firstItem="BU2-vn-Nrp" firstAttribute="centerX" secondItem="gw4-uD-vFo" secondAttribute="centerX" id="EUO-1L-Dcc"/>
+                                    <constraint firstItem="RIP-bM-H90" firstAttribute="top" secondItem="4BY-Fj-5Hw" secondAttribute="bottom" constant="30" id="KJs-vj-EUg"/>
                                     <constraint firstItem="4BY-Fj-5Hw" firstAttribute="top" secondItem="gw4-uD-vFo" secondAttribute="top" constant="100" id="QkK-SR-n7C"/>
                                     <constraint firstAttribute="trailing" secondItem="r4w-tp-Au1" secondAttribute="trailing" constant="20" id="TjH-Xi-6v8"/>
                                     <constraint firstItem="pGP-Zv-hwc" firstAttribute="centerX" secondItem="gw4-uD-vFo" secondAttribute="centerX" id="Vkz-7z-fqu"/>
                                     <constraint firstItem="r4w-tp-Au1" firstAttribute="leading" secondItem="gw4-uD-vFo" secondAttribute="leading" constant="20" id="WFy-PH-kFM"/>
                                     <constraint firstAttribute="trailing" secondItem="4BY-Fj-5Hw" secondAttribute="trailing" constant="30" id="csq-ZQ-Far"/>
+                                    <constraint firstItem="BU2-vn-Nrp" firstAttribute="centerY" secondItem="gw4-uD-vFo" secondAttribute="centerY" id="gnB-hM-fGz"/>
+                                    <constraint firstItem="RIP-bM-H90" firstAttribute="centerX" secondItem="gw4-uD-vFo" secondAttribute="centerX" id="hV4-72-vmy"/>
                                     <constraint firstItem="pGP-Zv-hwc" firstAttribute="top" secondItem="r4w-tp-Au1" secondAttribute="bottom" constant="30" id="key-DK-bsY"/>
                                     <constraint firstItem="4BY-Fj-5Hw" firstAttribute="leading" secondItem="gw4-uD-vFo" secondAttribute="leading" constant="30" id="vqk-hp-YRU"/>
-                                    <constraint firstItem="RIP-bM-H90" firstAttribute="centerX" secondItem="r4w-tp-Au1" secondAttribute="centerX" id="wcZ-M6-ftT"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -577,6 +591,7 @@
                     <connections>
                         <outlet property="correctButton" destination="7CQ-vR-VF3" id="eQz-tK-hS7"/>
                         <outlet property="correctWordsLabel" destination="04H-Vd-mfh" id="bfh-ta-vur"/>
+                        <outlet property="currentWordLabel" destination="BU2-vn-Nrp" id="hHv-EV-qTU"/>
                         <outlet property="resetButton" destination="pGP-Zv-hwc" id="KFn-QA-46W"/>
                         <outlet property="skipButton" destination="FSJ-mk-Knc" id="3NV-gY-Adl"/>
                         <outlet property="teamLabel" destination="NEK-sq-Tqv" id="HY5-xp-PCf"/>

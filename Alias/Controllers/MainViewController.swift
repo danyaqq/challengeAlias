@@ -17,7 +17,7 @@ class MainViewController: UIViewController {
     
     //MARK: - Properties
     var gameData: GameData = GameData()
-    var teams: [String] = []
+    var teams: [Team] = []
     
     //MARK: - Lifecycle
     override func viewDidLoad() {
@@ -38,7 +38,7 @@ class MainViewController: UIViewController {
     
     @IBAction func nextButtonTap(_ sender: UIButton) {
         for i in 1...Int(stepper.value){
-            teams.append("Команда \(i)")
+            teams.append(Team(name: "Команда \(i)"))
         }
         gameData.teams = teams
     }
