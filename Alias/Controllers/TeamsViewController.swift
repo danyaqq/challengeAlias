@@ -11,6 +11,10 @@ class TeamsViewController: UIViewController{
 
     @IBOutlet weak var nextButton: UIButton!
     
+    override var shouldAutorotate: Bool {
+        false
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()

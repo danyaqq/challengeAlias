@@ -14,6 +14,12 @@ class ResultsViewController: UIViewController {
     @IBOutlet weak var outButton: UIButton!
     @IBOutlet weak var scoreLabel: UILabel!
     
+    //MARK: - Screen orientation
+    override var shouldAutorotate: Bool {
+        false
+    }
+    
+    //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()

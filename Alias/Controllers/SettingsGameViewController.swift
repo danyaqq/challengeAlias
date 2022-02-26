@@ -10,10 +10,10 @@ import UIKit
 class SettingsGameViewController: UIViewController {
     
     //MARK: - Views
-    @IBOutlet weak var sportButton: UIButton!
-    @IBOutlet weak var filmButton: UIButton!
-    @IBOutlet weak var animalsButton: UIButton!
     @IBOutlet weak var historyButton: UIButton!
+    @IBOutlet weak var animalsButton: UIButton!
+    @IBOutlet weak var sportButton: UIButton!
+    @IBOutlet weak var filmsButton: UIButton!
     
     @IBOutlet weak var startButton: UIButton!
     
@@ -27,6 +27,11 @@ class SettingsGameViewController: UIViewController {
     var selectedTime: Int = 60
     var gameData: GameData = GameData()
     
+    //MARK: - Screen orientation
+    override var shouldAutorotate: Bool {
+        false
+    }
+    
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +40,7 @@ class SettingsGameViewController: UIViewController {
     
     //MARK: - Setup views
     func setupView(){
-        for button in [sportButton, filmButton, animalsButton, historyButton, startButton, oneMinuteButton, twoMinuteButton, threeMinuteButton]{
+        for button in [historyButton, animalsButton, sportButton, filmsButton, startButton, oneMinuteButton, twoMinuteButton, threeMinuteButton]{
             button?.layer.cornerRadius = 8
         }
         
@@ -48,7 +53,7 @@ class SettingsGameViewController: UIViewController {
         oneMinuteButton.sendActions(for: .touchUpInside)
         
         //Нажимаем на кнопку "Спорт" при инициализации view
-        sportButton.sendActions(for: .touchUpInside)
+        historyButton.sendActions(for: .touchUpInside)
     }
     
     //MARK: - Actions
@@ -98,7 +103,7 @@ class SettingsGameViewController: UIViewController {
         }
         selectedCategory = text
         
-        for button in [sportButton, filmButton, animalsButton, historyButton]{
+        for button in [historyButton, animalsButton, sportButton, filmsButton]{
             if selectedCategory == button?.titleLabel?.text{
                 button?.backgroundColor = .lightGray
             } else {
@@ -120,6 +125,7 @@ class SettingsGameViewController: UIViewController {
     @IBAction func startButtonTap(_ sender: UIButton) {
         gameData.time = selectedTime
         gameData.wordsWithCategory = wordsWithCategory
+        gameData.timerProcess()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

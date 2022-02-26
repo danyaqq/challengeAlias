@@ -14,8 +14,12 @@ class TheRoundIsOverViewController: UIViewController {
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var playRoundButton: UIButton!
     
+    //MARK: - Screen orientation
+    override var shouldAutorotate: Bool {
+        false
+    }
     
-    
+    //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
