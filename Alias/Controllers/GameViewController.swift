@@ -8,7 +8,7 @@
 import UIKit
 
 class GameViewController: UIViewController {
-
+    
     //MARK: - Views
     @IBOutlet weak var correctButton: UIButton!
     @IBOutlet weak var skipButton: UIButton!
@@ -19,7 +19,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var currentWordLabel: UILabel!
     
     //MARK: - Properties
-    var gameData = GameData()
+    var gameData: GameData = GameData()
     
     //MARK: - Screen orientation
     override var shouldAutorotate: Bool {
@@ -30,6 +30,7 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+        setupGame()
     }
     
     //MARK: - Setup views
@@ -37,25 +38,73 @@ class GameViewController: UIViewController {
         for button in [correctButton, skipButton, resetButton]{
             button?.layer.cornerRadius = 8
         }
-        setupGame()
+        
+        navigationController?.navigationBar.isHidden = true
     }
-
+    
     @IBAction func skipButtonTap(_ sender: UIButton) {
-        gameData.addPoint()
+        gameData.removePoint()
         currentWordLabel.text = gameData.currentWord
+        correctWordsLabel.text = String(gameData.selectedTeam?.score ?? 0)
     }
     
     @IBAction func correctButtonTap(_ sender: UIButton) {
-        gameData.removePoint()
+        gameData.addPoint()
         currentWordLabel.text = gameData.currentWord
+        correctWordsLabel.text = String(gameData.selectedTeam?.score ?? 0)
     }
     
     @IBAction func exitButtonTap(_ sender: Any) {
     }
     
     func setupGame(){
+        //Запускаем функцию настройки игры
+        gameData.gameSetup()
+        //Очки команды
+        correctWordsLabel.text = String(gameData.selectedTeam?.score ?? 0)
+        //Название команды
+        teamLabel.text = gameData.selectedTeam?.name
+        //Получаем рандомное слово
         gameData.getRandomWord()
+        //Обновляем лэйбл
         currentWordLabel.text = gameData.currentWord
-        timeLabel.text = String(gameData.time)
+        //Запускаем таймер
+        timerProcess()
+    }
+    
+    func timerProcess(){
+        gameData.timer.invalidate()
+        gameData.timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToRoundOverVC" {
+            let destinationVC = segue.destination as! TheRoundIsOverViewController
+            destinationVC.gameData = gameData
+            destinationVC.callBack = { [weak self] in
+                self?.gameData.changeSelectedTeam()
+                self?.setupGame()
+            }
+        }
+    }
+    
+    @objc
+    func updateTimer() {
+        if gameData.time != 0{
+            gameData.time -= 1
+            timeLabel.text = String(gameData.time)
+        } else {
+            gameData.time = 0
+            gameData.timer.invalidate()
+            //navigate to result screen
+            guard let rounds = gameData.rounds else {
+                return
+            }
+            if gameData.currentRound < rounds{
+            self.performSegue(withIdentifier: "goToRoundOverVC", sender: self)
+            } else {
+                self.performSegue(withIdentifier: "goToResult", sender: self)
+            }
+        }
     }
 }
