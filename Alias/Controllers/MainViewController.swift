@@ -40,15 +40,15 @@ class MainViewController: UIViewController {
         for i in 1...Int(stepper.value){
             teams.append(Team(name: "Команда \(i)"))
         }
-        gameData.teams = teams
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        gameData.teams = teams
         if segue.identifier == "goToSettings" {
             let destinationVC = segue.destination as! SettingsGameViewController
             destinationVC.gameData = gameData
         }
     }
-
+    
 }
 

@@ -11,11 +11,15 @@ protocol JokeManagerDelegate: AnyObject {
     func didUpdateJoke(_ jokeManager: JokeManager, joke: Joke)
 }
 
-struct JokeManager {
+class JokeManager {
     
-    let jokeURL = "http://rzhunemogu.ru/RandJSON.aspx?CType=1"
+    let jokeURL = "https://geek-jokes.sameerkumar.website/api?format=json"
     
     weak var delegate: JokeManagerDelegate?
+    
+    init(){
+        performRequest(with: jokeURL)
+    }
     
     func performRequest(with jokeURL: String) {
         if let url = URL(string: jokeURL) {
@@ -29,6 +33,7 @@ struct JokeManager {
                 if let safeData = data {
                     if let joke = self.parseJSON(safeData) {
                         self.delegate?.didUpdateJoke(self, joke: joke)
+                        print(joke)
                     }
                 }
             }

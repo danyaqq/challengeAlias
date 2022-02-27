@@ -8,5 +8,5 @@
 import Foundation
 
 struct Joke: Decodable {
-    let content: String
+    let joke: String
 }

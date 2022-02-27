@@ -66,7 +66,11 @@ class GameData{
             team.score = 0
             team.guessedWords = 0
         }
+        timeConstant = 0
+        time = 0
+        wordsWithCategory = nil
         selectedTeam = nil
+        teams = []
         currentRound = 1
         rounds = nil
     }
