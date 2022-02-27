@@ -29,6 +29,7 @@ class ResultsViewController: UIViewController {
         outButton.layer.cornerRadius = 8
         navigationController?.navigationBar.isHidden = true
         
+
         scoreLabel.text = "ОЧКИ"
         winnerLabel.text = "Победила"
     }
