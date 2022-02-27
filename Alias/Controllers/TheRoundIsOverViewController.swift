@@ -19,10 +19,6 @@ class TheRoundIsOverViewController: UIViewController {
     var score: Int?
     var callBack: (()-> ())?
     
-    override var shouldAutorotate: Bool {
-        false
-    }
-    
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +33,7 @@ class TheRoundIsOverViewController: UIViewController {
     func setupView() {
         playRoundButton.layer.cornerRadius = 8
         
-        scoreLabel.text = "Очки: \(gameData.selectedTeam?.score ?? 0)"
-        currentTeamLabel.text = gameData.getNextTeamName()
+        scoreLabel.text = "ОЧКИ\n\(String(describing: gameData.selectedTeam!.name)):  \(gameData.selectedTeam?.score ?? 0)"
+        currentTeamLabel.text = "Следующая играет: \(gameData.getNextTeamName())"
     }
 }

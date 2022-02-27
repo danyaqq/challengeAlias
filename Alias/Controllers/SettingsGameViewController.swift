@@ -27,11 +27,6 @@ class SettingsGameViewController: UIViewController {
     var selectedTime: Int = 60
     var gameData: GameData = GameData()
     
-    //MARK: - Screen orientation
-    override var shouldAutorotate: Bool {
-        false
-    }
-    
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
