@@ -16,12 +16,13 @@ class ResultsViewController: UIViewController {
     
     //MARK: - Properties
     var gameData = GameData()
+    var jokeManager = JokeManager()
     
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        getAlert()
+        jokeManager.delegate = self
     }
     
     func setupView() {
@@ -36,9 +37,17 @@ class ResultsViewController: UIViewController {
         gameData.resetGame()
         self.navigationController?.popToRootViewController(animated: true)
     }
-    
-    func getAlert() {
-        let alert = UIAlertController(title: "Шутка", message: "", preferredStyle: UIAlertController.Style.alert)
-        self.present(alert, animated: true, completion: nil)
+}
+
+extension ResultsViewController: JokeManagerDelegate{
+    func didUpdateJoke(_ jokeManager: JokeManager, joke: Joke) {
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: "Шутка", message: joke.joke, preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default) {_ in
+                alert.dismiss(animated: true, completion: nil)
+            })
+            
+            self.present(alert, animated: true, completion: nil)
+        }
     }
 }

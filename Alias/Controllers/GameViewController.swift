@@ -50,7 +50,8 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func exitButtonTap(_ sender: Any) {
-   
+        gameData.resetGame()
+        navigationController?.popToRootViewController(animated: true)
     }
     
     func setupGame(){
@@ -82,12 +83,12 @@ class GameViewController: UIViewController {
                 self?.setupGame()
             }
         }
-        if segue.identifier == "goToSettings" {
-            let destinationVC = segue.destination as! MainViewController
-            destinationVC.gameData = gameData
-            gameData.resetGame()
-            self.navigationController?.popToRootViewController(animated: true)
-        }
+//        if segue.identifier == "goToSettings" {
+//            let destinationVC = segue.destination as! MainViewController
+//            destinationVC.gameData = gameData
+//            gameData.resetGame()
+//            self.navigationController?.popToRootViewController(animated: true)
+//        }
     }
     
     @objc
