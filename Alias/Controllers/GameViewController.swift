@@ -20,7 +20,7 @@ class GameViewController: UIViewController {
     
     //MARK: - Properties
     var gameData: GameData = GameData()
-    
+    var player = Audioplayer()
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,18 +38,21 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func skipButtonTap(_ sender: UIButton) {
+        player.playSound(resource: (sender.titleLabel?.text)!)
         gameData.removePoint()
         currentWordLabel.text = gameData.currentWord
         correctWordsLabel.text = String(gameData.selectedTeam?.score ?? 0)
     }
     
     @IBAction func correctButtonTap(_ sender: UIButton) {
+        player.playSound(resource: (sender.titleLabel?.text)!)
         gameData.addPoint()
         currentWordLabel.text = gameData.currentWord
         correctWordsLabel.text = String(gameData.selectedTeam?.score ?? 0)
     }
     
     @IBAction func exitButtonTap(_ sender: Any) {
+        player.playSound(resource: ((sender as AnyObject).titleLabel?.text)!)
         gameData.resetGame()
         navigationController?.popToRootViewController(animated: true)
     }

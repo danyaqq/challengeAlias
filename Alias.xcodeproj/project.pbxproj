@@ -18,15 +18,16 @@
 		372C3C7327C64DFB00EF01DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 372C3C7127C64DFB00EF01DC /* Main.storyboard */; };
 		372C3C7527C64DFE00EF01DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 372C3C7427C64DFE00EF01DC /* Assets.xcassets */; };
 		372C3C7827C64DFE00EF01DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 372C3C7627C64DFE00EF01DC /* LaunchScreen.storyboard */; };
-		372C3C8427C64E7800EF01DC /* skip.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 372C3C8127C64E7800EF01DC /* skip.mp3 */; };
+		372C3C8427C64E7800EF01DC /* exit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 372C3C8127C64E7800EF01DC /* exit.mp3 */; };
 		372C3C8527C64E7800EF01DC /* right.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 372C3C8227C64E7800EF01DC /* right.mp3 */; };
-		372C3C8627C64E7800EF01DC /* wron.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 372C3C8327C64E7800EF01DC /* wron.mp3 */; };
+		372C3C8627C64E7800EF01DC /* skip.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 372C3C8327C64E7800EF01DC /* skip.mp3 */; };
 		372C3C8827C6582700EF01DC /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372C3C8727C6582700EF01DC /* RulesViewController.swift */; };
 		372C3C8C27C65F4A00EF01DC /* SettingsGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372C3C8B27C65F4A00EF01DC /* SettingsGameViewController.swift */; };
 		372C3C9027C667D400EF01DC /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372C3C8F27C667D400EF01DC /* NetworkService.swift */; };
 		37A9841727C7DA7A0078F6EE /* TeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A9841627C7DA7A0078F6EE /* TeamsViewController.swift */; };
 		37FF3CC127C69DC4002A14BD /* Joke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FF3CC027C69DC4002A14BD /* Joke.swift */; };
 		37FF3CC327C69DCC002A14BD /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FF3CC227C69DCC002A14BD /* Category.swift */; };
+		E44AA5B527CBB57D003F0945 /* Audioplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44AA5B427CBB57D003F0945 /* Audioplayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,15 +44,16 @@
 		372C3C7427C64DFE00EF01DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		372C3C7727C64DFE00EF01DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		372C3C7927C64DFE00EF01DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		372C3C8127C64E7800EF01DC /* skip.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = skip.mp3; sourceTree = "<group>"; };
+		372C3C8127C64E7800EF01DC /* exit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = exit.mp3; sourceTree = "<group>"; };
 		372C3C8227C64E7800EF01DC /* right.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = right.mp3; sourceTree = "<group>"; };
-		372C3C8327C64E7800EF01DC /* wron.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = wron.mp3; sourceTree = "<group>"; };
+		372C3C8327C64E7800EF01DC /* skip.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = skip.mp3; sourceTree = "<group>"; };
 		372C3C8727C6582700EF01DC /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
 		372C3C8B27C65F4A00EF01DC /* SettingsGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsGameViewController.swift; sourceTree = "<group>"; };
 		372C3C8F27C667D400EF01DC /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		37A9841627C7DA7A0078F6EE /* TeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewController.swift; sourceTree = "<group>"; };
 		37FF3CC027C69DC4002A14BD /* Joke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joke.swift; sourceTree = "<group>"; };
 		37FF3CC227C69DCC002A14BD /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		E44AA5B427CBB57D003F0945 /* Audioplayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Audioplayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,8 +110,8 @@
 			isa = PBXGroup;
 			children = (
 				372C3C8227C64E7800EF01DC /* right.mp3 */,
-				372C3C8127C64E7800EF01DC /* skip.mp3 */,
-				372C3C8327C64E7800EF01DC /* wron.mp3 */,
+				372C3C8127C64E7800EF01DC /* exit.mp3 */,
+				372C3C8327C64E7800EF01DC /* skip.mp3 */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -150,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				372C3C8F27C667D400EF01DC /* NetworkService.swift */,
+				E44AA5B427CBB57D003F0945 /* Audioplayer.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -225,8 +228,8 @@
 			files = (
 				372C3C8527C64E7800EF01DC /* right.mp3 in Resources */,
 				372C3C7827C64DFE00EF01DC /* LaunchScreen.storyboard in Resources */,
-				372C3C8627C64E7800EF01DC /* wron.mp3 in Resources */,
-				372C3C8427C64E7800EF01DC /* skip.mp3 in Resources */,
+				372C3C8627C64E7800EF01DC /* skip.mp3 in Resources */,
+				372C3C8427C64E7800EF01DC /* exit.mp3 in Resources */,
 				372C3C7527C64DFE00EF01DC /* Assets.xcassets in Resources */,
 				372C3C7327C64DFB00EF01DC /* Main.storyboard in Resources */,
 			);
@@ -244,6 +247,7 @@
 				3701039D27CA4C070099D2E9 /* Team.swift in Sources */,
 				372C3C8C27C65F4A00EF01DC /* SettingsGameViewController.swift in Sources */,
 				37A9841727C7DA7A0078F6EE /* TeamsViewController.swift in Sources */,
+				E44AA5B527CBB57D003F0945 /* Audioplayer.swift in Sources */,
 				3701039727C98D040099D2E9 /* GameData.swift in Sources */,
 				372C3C6C27C64DFB00EF01DC /* AppDelegate.swift in Sources */,
 				372C3C8827C6582700EF01DC /* RulesViewController.swift in Sources */,
