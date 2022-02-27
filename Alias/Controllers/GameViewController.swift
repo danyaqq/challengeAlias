@@ -21,11 +21,6 @@ class GameViewController: UIViewController {
     //MARK: - Properties
     var gameData: GameData = GameData()
     
-    //MARK: - Screen orientation
-    override var shouldAutorotate: Bool {
-        false
-    }
-    
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,6 +50,7 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func exitButtonTap(_ sender: Any) {
+   
     }
     
     func setupGame(){
@@ -86,11 +82,17 @@ class GameViewController: UIViewController {
                 self?.setupGame()
             }
         }
+        if segue.identifier == "goToSettings" {
+            let destinationVC = segue.destination as! MainViewController
+            destinationVC.gameData = gameData
+            gameData.resetGame()
+            self.navigationController?.popToRootViewController(animated: true)
+        }
     }
     
     @objc
     func updateTimer() {
-        if gameData.time != 0{
+        if gameData.time != 0 {
             gameData.time -= 1
             timeLabel.text = String(gameData.time)
         } else {

@@ -13,10 +13,6 @@ class RulesViewController: UIViewController {
     @IBOutlet weak var secondText: UILabel!
     @IBOutlet weak var thirdText: UILabel!
     
-    override var shouldAutorotate: Bool {
-        false
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
