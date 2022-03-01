@@ -14,9 +14,7 @@ class SettingsGameViewController: UIViewController {
     @IBOutlet weak var animalsButton: UIButton!
     @IBOutlet weak var sportButton: UIButton!
     @IBOutlet weak var filmsButton: UIButton!
-    
     @IBOutlet weak var startButton: UIButton!
-    
     @IBOutlet weak var oneMinuteButton: UIButton!
     @IBOutlet weak var twoMinuteButton: UIButton!
     @IBOutlet weak var threeMinuteButton: UIButton!
@@ -42,7 +40,7 @@ class SettingsGameViewController: UIViewController {
             button?.layer.cornerRadius = 8
         }
         //Задаём тэги кнопкам, чтобы потом приравнивать их выбранному времени
-        oneMinuteButton.tag = 2
+        oneMinuteButton.tag = 60
         twoMinuteButton.tag = 120
         threeMinuteButton.tag = 180
         //Нажимаем на кнопку "1 минута" при инициализации view

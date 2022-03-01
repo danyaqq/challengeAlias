@@ -39,8 +39,12 @@ class GameData{
     
     //Получаем рандомное слово
     func getRandomWord(){
+        //Берём рандомное слово из массива
         let randomWord = wordsWithCategory?.words.randomElement()
+        //Задаём значение нашей переменной currentWord
         currentWord = randomWord
+        //Удаляем слово из нашего массива слов
+        wordsWithCategory?.words.removeAll(where: {$0 == randomWord})
     }
     
     //Добавляем очко команде
@@ -69,14 +73,24 @@ class GameData{
     
     //Получем название победитея
     func getWinnerTeam() {
-        //Добавить исход "Ничья"
-//        let filterTeam = teams.elementsEqual(Team, by: { $0.score == $1.score })
+        //Сортируем массив с командами по количеству очков.
+        //Берём первое значение и приравниваем нашу переменную
+        //с именем команды, которая имеет намбольшим количеством очков,
+        //если у каждой команды разное количество очков.
+        //В противном случае задаём значение "Ничья" нашей переменной.
+        winnerTeam = "Ничья"
         
         let sortedTeam = teams.sorted(by: {
             $0.score > $1.score
         }).first
         
-        winnerTeam = sortedTeam?.name
+        if let firstElem = teams.first {
+            for elem in teams {
+                if elem.score != firstElem.score {
+                    winnerTeam = sortedTeam?.name
+                }
+            }
+        }
     }
     
     //Получаем очки всех команд

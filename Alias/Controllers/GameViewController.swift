@@ -78,8 +78,9 @@ class GameViewController: UIViewController {
         teamLabel.text = gameData.selectedTeam?.name
         //Получаем рандомное слово
         gameData.getRandomWord()
-        //Обновляем лэйбл
+        //Обновляем лэйблы
         currentWordLabel.text = gameData.currentWord
+        timeLabel.text = String(gameData.time)
         //Запускаем таймер
         timerProcess()
     }
