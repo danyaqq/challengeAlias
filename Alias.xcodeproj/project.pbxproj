@@ -24,7 +24,6 @@
 		372C3C8827C6582700EF01DC /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372C3C8727C6582700EF01DC /* RulesViewController.swift */; };
 		372C3C8C27C65F4A00EF01DC /* SettingsGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372C3C8B27C65F4A00EF01DC /* SettingsGameViewController.swift */; };
 		372C3C9027C667D400EF01DC /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372C3C8F27C667D400EF01DC /* NetworkService.swift */; };
-		37A9841727C7DA7A0078F6EE /* TeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A9841627C7DA7A0078F6EE /* TeamsViewController.swift */; };
 		37FF3CC127C69DC4002A14BD /* Joke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FF3CC027C69DC4002A14BD /* Joke.swift */; };
 		37FF3CC327C69DCC002A14BD /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FF3CC227C69DCC002A14BD /* Category.swift */; };
 		E44AA5B527CBB57D003F0945 /* Audioplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44AA5B427CBB57D003F0945 /* Audioplayer.swift */; };
@@ -50,7 +49,6 @@
 		372C3C8727C6582700EF01DC /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
 		372C3C8B27C65F4A00EF01DC /* SettingsGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsGameViewController.swift; sourceTree = "<group>"; };
 		372C3C8F27C667D400EF01DC /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
-		37A9841627C7DA7A0078F6EE /* TeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewController.swift; sourceTree = "<group>"; };
 		37FF3CC027C69DC4002A14BD /* Joke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joke.swift; sourceTree = "<group>"; };
 		37FF3CC227C69DCC002A14BD /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		E44AA5B427CBB57D003F0945 /* Audioplayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Audioplayer.swift; sourceTree = "<group>"; };
@@ -134,7 +132,6 @@
 				3701039827CA22480099D2E9 /* ResultsViewController.swift */,
 				372C3C8727C6582700EF01DC /* RulesViewController.swift */,
 				372C3C8B27C65F4A00EF01DC /* SettingsGameViewController.swift */,
-				37A9841627C7DA7A0078F6EE /* TeamsViewController.swift */,
 				3701039A27CA22620099D2E9 /* TheRoundIsOverViewController.swift */,
 			);
 			path = Controllers;
@@ -246,7 +243,6 @@
 				372C3C7027C64DFB00EF01DC /* MainViewController.swift in Sources */,
 				3701039D27CA4C070099D2E9 /* Team.swift in Sources */,
 				372C3C8C27C65F4A00EF01DC /* SettingsGameViewController.swift in Sources */,
-				37A9841727C7DA7A0078F6EE /* TeamsViewController.swift in Sources */,
 				E44AA5B527CBB57D003F0945 /* Audioplayer.swift in Sources */,
 				3701039727C98D040099D2E9 /* GameData.swift in Sources */,
 				372C3C6C27C64DFB00EF01DC /* AppDelegate.swift in Sources */,

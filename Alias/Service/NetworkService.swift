@@ -12,7 +12,6 @@ protocol JokeManagerDelegate: AnyObject {
 }
 
 class JokeManager {
-    
     let jokeURL = "https://geek-jokes.sameerkumar.website/api?format=json"
     
     weak var delegate: JokeManagerDelegate?
@@ -29,11 +28,9 @@ class JokeManager {
                 if error != nil {
                     return
                 }
-                
                 if let safeData = data {
                     if let joke = self.parseJSON(safeData) {
                         self.delegate?.didUpdateJoke(self, joke: joke)
-                        print(joke)
                     }
                 }
             }
