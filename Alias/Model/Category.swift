@@ -9,8 +9,8 @@ import Foundation
 
 //по 60 слов на 4 категории (спорт, фильмы, животные, история)
 struct Category{
-    let name: String
-    let words: [String]
+    var name: String
+    var words: [String]
     
     init(name: String, words: [String]) {
         self.name = name
