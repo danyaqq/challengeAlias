@@ -25,13 +25,22 @@ class MainViewController: UIViewController {
         setupView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        //Сбрасываем все настройки игры при загрузке view
+        teams = []
+        gameData.resetGame()
+    }
+    
     //MARK: - Setup views
     func setupView(){
+        //Скругляем края кнопкам
         startButton.layer.cornerRadius = 8
         howToPlayButton.layer.cornerRadius = 8
+        //Выставляем минимальное значение для степпера
         stepper.minimumValue = 2
     }
     
+    //MARK: - Actions
     @IBAction func stepperTapped(_ sender: UIStepper) {
         teamsCount.text = "Количество команд: \(Int(sender.value))"
     }
@@ -42,6 +51,7 @@ class MainViewController: UIViewController {
         }
     }
     
+    //MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         gameData.teams = teams
         if segue.identifier == "goToSettings" {
@@ -49,6 +59,5 @@ class MainViewController: UIViewController {
             destinationVC.gameData = gameData
         }
     }
-    
 }
 

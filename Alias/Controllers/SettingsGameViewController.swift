@@ -35,24 +35,23 @@ class SettingsGameViewController: UIViewController {
     
     //MARK: - Setup views
     func setupView(){
+        //Показываем navigationBar
+        navigationController?.navigationBar.isHidden = false
+        //Скругляеи края кнопкам
         for button in [historyButton, animalsButton, sportButton, filmsButton, startButton, oneMinuteButton, twoMinuteButton, threeMinuteButton]{
             button?.layer.cornerRadius = 8
         }
-        
         //Задаём тэги кнопкам, чтобы потом приравнивать их выбранному времени
-        oneMinuteButton.tag = 10
+        oneMinuteButton.tag = 2
         twoMinuteButton.tag = 120
         threeMinuteButton.tag = 180
-        
         //Нажимаем на кнопку "1 минута" при инициализации view
         oneMinuteButton.sendActions(for: .touchUpInside)
-        
         //Нажимаем на кнопку "Спорт" при инициализации view
         historyButton.sendActions(for: .touchUpInside)
     }
     
     //MARK: - Actions
-    
     //Выбранное время становится равным тэгу кнопки
     //Добавляем border при нажатие на кнопку
     //Убираем border у других кнопок
@@ -123,11 +122,11 @@ class SettingsGameViewController: UIViewController {
         gameData.wordsWithCategory = wordsWithCategory
     }
     
+    //MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToGame" {
             let destinationVC = segue.destination as! GameViewController
             destinationVC.gameData = gameData
         }
     }
-    
 }
